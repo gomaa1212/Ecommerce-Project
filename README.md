@@ -35,8 +35,11 @@ The **Online Clothing Store** is a web-based e-commerce platform that allows use
 - **Backend:** .NET Core Web API  
 - **Database:** SQL Server  
 - **Authentication:** JWT-based authentication  
-- **Hosting:** Azure or AWS   
-
+- **Hosting:** Azure or AWS
+  
+## DBdiagram
+  ![ERD Diagram](https://github.com/gomaa1212/Ecommerce-Project/blob/main/DBdiagram/DBdiagram.png)
+  
 ## Risk Assessment & Mitigation
 - **Security Threats:** Implement robust encryption and authentication.  
 - **Performance Issues:** Optimize database queries and caching.  
