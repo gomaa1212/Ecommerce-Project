@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Meow Market</title>
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="/index.html" class="logo" aria-label="Meow Market Home">
+        <div class="logo-mark"><span>🐾</span></div>
+        <span>Meow Market</span>
+      </a>
+      <nav>
+        <button class="mobile-toggle" aria-label="Toggle navigation" id="mobileToggle">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="/index.html">Home</a>
+          <a href="/cats.html">Cats</a>
+          <a href="/about.html">About</a>
+          <a class="active" href="/contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p class="lead">We'd love to hear from you. This demo form does not send data.</p>
+      <form class="form" id="contactForm">
+        <div class="row">
+          <div>
+            <label class="label" for="name">Name</label>
+            <input class="input" type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div>
+            <label class="label" for="email">Email</label>
+            <input class="input" type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+          <div>
+            <label class="label" for="message">Message</label>
+            <textarea class="input" id="message" name="message" rows="5" placeholder="Tell us about the cat you're interested in" required></textarea>
+          </div>
+          <div>
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Meow Market</span>
+      <span>Made with ❤️ for cat lovers</span>
+    </div>
+  </footer>
+
+  <script>
+  // Simple demo handling
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const hash = window.location.hash;
+    if (hash === '#inquiry') {
+      const message = document.getElementById('message');
+      if (message && !message.value) {
+        message.value = 'Hello! I am interested in one of the cats listed on Meow Market. Could you share more details?';
+      }
+    }
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thanks for reaching out! This demo does not send messages.');
+      form.reset();
+    });
+  });
+  </script>
+  <script src="/assets/js/data.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
